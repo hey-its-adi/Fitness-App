@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" 
+        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" 
+        crossorigin="anonymous">
+        <title>Sign-up</title>
+    </head>
+    <body>
+        <form action="signup.php" method="POST">
+            <table>
+                <tr>
+                    <td colspan="2"><h3>SIGN UP</h3></td>
+                </tr>
+                <tr>
+                    <td>Name</td>
+                    <td><input type="text" name="name" size="30" maxlength="30" placeholder="Enter your name"/></td>
+                </tr>
+                <tr>
+                    <td>Password</td>
+                    <td><input type="password" name="password" minlength="8" maxlength="30" size="30"
+                        placeholder="Enter password"/></td>
+                </tr>
+                <tr>
+                    <td>Email</td>
+                    <td><input type="email" name="email" placeholder="Enter a valid email ID" size="30"/></td>
+                </tr>
+                <tr>
+                    <td>Height</td>
+                    <td><input type="text" name="height" size="30" placeholder="Height"/></td>
+                </tr>
+                <tr>
+                    <td>Weight</td>
+                    <td><input type="text" name="weight" size="30" placeholder="Weight"/></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><button type="button" class="btn btn-primary" name="submit">SIGN UP</button></td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>
