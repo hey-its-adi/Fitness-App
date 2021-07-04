@@ -1,0 +1,142 @@
+<html>
+    <head>
+        <title>Checking</title>
+        <style>
+            .container {
+  margin: 20px;
+  width: 500px;
+  height: 500px;
+  perspective: 1000px;
+
+}
+body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.card {
+  transition: transform 2s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+}
+.front, .back {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  backface-visibility: hidden;
+}
+.front {
+  border: 2px solid black;
+
+}
+.back {
+  border: 2px solid black;
+  transform: rotateY(180deg);
+}
+div {
+  width: 100%;
+  height: 100%;
+}
+
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="card">
+             
+             
+              <div class="front">
+                <form action="login.php" method="POST">
+                
+                   <table>
+                            <tr>
+                            <td><label for="name">Username: </label></td>
+                            <td><input type="text" id="name" name="name" placeholder="Enter username"></td>
+                            <br>
+                            <br>
+                        </tr>
+                        <tr>
+                            <td><label for="password">Password: </label></td>
+                            <td><input type="password" id="password" name="password" placeholder="Enter password"></td>
+                            <br>
+                            <br>
+                        </tr>
+                        <tr>
+                            <td><label for="email">Email ID:  </label></td>
+                            <td><input type="email" id="email" name="email" placeholder="Enter email ID"></td>
+                            <br>
+                            <br>
+                        </tr>
+                        
+                        <tr>
+                            <td colspan="2" class="align">
+                                <input type="submit" name="submit" style="text-align:center" value="submit" required>
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+              </div>
+              
+              
+              
+              <div class="back">
+                <form action="signup.php" method="POST">
+                  <table>
+                      <tr>
+                          <td colspan="2"><h3>SIGN UP</h3></td>
+                      </tr>
+                      <tr>
+                          <td>Name</td>
+                          <td><input type="text" name="name" size="30" maxlength="30" placeholder="Enter your name"/></td>
+                      </tr>
+                      <tr>
+                          <td>Password</td>
+                          <td><input type="password" name="password" maxlength="30" size="30"
+                              placeholder="Enter password"/></td>
+                      </tr>
+                      <tr>
+                          <td>Email</td>
+                          <td><input type="email" name="email" placeholder="Enter a valid email ID" size="30"/></td>
+                      </tr>
+                      <tr>
+                          <td>Weight</td>
+                          <td><input type="text" name="weight" size="30" placeholder="Weight"/></td>
+                      </tr>
+                      <tr>
+                          <td>Height</td>
+                          <td><input type="text" name="height" size="30" placeholder="Height"/></td>
+                      </tr>
+                      <tr>
+                          <td colspan="2"><button type="submit" class="btn btn-primary" name="submit">SIGN UP</button></td>
+                      </tr>
+                  </table>
+              </form>
+              </div>
+            
+              
+            </div>
+           
+          </div>
+          <button onclick="flip()">flip</button>
+    </body>
+    
+    
+    <script>
+        
+        function flip() {
+          var element = document.getElementsByClassName('card')[0];
+          if(element.style.transform == "rotateY(180deg)") {
+            element.style.transform = "rotateY(0deg)";
+          }
+          else {
+            element.style.transform = "rotateY(180deg)";
+          }
+        }
+    </script>
+</html>
