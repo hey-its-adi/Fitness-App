@@ -30,7 +30,7 @@ body {
   flex-wrap: wrap;
   background-image:radial-gradient(#c5e9ee,#0c8bed);
 }
-.card {
+.cardo {
   transition: transform 2s;
   transform-style: preserve-3d;
   cursor: pointer;
@@ -46,10 +46,11 @@ body {
   backface-visibility: hidden;
   box-shadow: 0 0 8px 0 rgba(0,0,0,0.2);
   border-radius: 50px 50px 0px 0px;
+
   
   
 }
-.front,.back,.card{
+.front,.back{
   background-image: url('Images/bg1.jpg');
     background-repeat: no-repeat;
     background-position: center;
@@ -99,7 +100,7 @@ h2{
     <body>
         <div class="container">
           
-          <div class="card">
+          <div class="cardo">
               
              
               <div class="front">
@@ -175,7 +176,7 @@ h2{
     <script>
         
         function flip1() {
-          var element = document.getElementsByClassName('card')[0];
+          var element = document.getElementsByClassName('cardo')[0];
           if (element.style.transform != "rotateY(180deg)") {
             element.style.transform = "rotateY(180deg)";
             document.getElementById('btn1').innerHTML = "Login ?";
