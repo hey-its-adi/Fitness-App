@@ -59,8 +59,8 @@ div {
     </head>
     <body>
         <div class="container">
-            <button type="button" class="btn btn-primary" onclick="flip1()">SIGN UP</button>
-            <button type="button" class="btn btn-primary" onclick="flip2()">LOGIN</button>
+            <button type="button" class="btn btn-primary" id="btn1" onclick="flip1()">SIGN UP</button>
+            
             <div class="card">
              
              
@@ -134,13 +134,14 @@ div {
         
         function flip1() {
           var element = document.getElementsByClassName('card')[0];
-          
+          if (element.style.transform != "rotateY(180deg)") {
             element.style.transform = "rotateY(180deg)";
-        }
-        function flip2() {
-          var element = document.getElementsByClassName('card')[0];
-          
+            document.getElementById('btn1').innerHTML = "LOGIN";
+          } else {
             element.style.transform = "rotateY(0deg)";
+            document.getElementById('btn1').innerHTML = "SIGN UP";
+          }
         }
+        
     </script>
 </html>
