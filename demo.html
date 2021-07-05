@@ -65,17 +65,17 @@ div {
              
              
               <div class="front">
-                <form action="login.php" method="POST">
+                <form action="login.php" method="POST" class="form-inline">
                 
                    <table>
-                        <tr>
-                            <td><label for="email">Email ID:  </label></td>
-                            <td><input type="email" id="email" name="email" placeholder="Enter email ID"></td>
+                        <tr class="form-group">
+                            <td style="vertical-align:top;"><label for="email" >Email ID:  </label></td>
+                            <td><input type="email" id="email" name="email" class="form-control mb-4" placeholder="Enter email ID"></td>
                             
                         </tr>
-                        <tr>
-                            <td><label for="password">Password: </label></td>
-                            <td><input type="password" id="password" name="password" placeholder="Enter password"></td>
+                        <tr class="form-group">
+                            <td><label for="password" class="form-">Password: </label></td>
+                            <td><input type="password" id="password" name="password" class="form-control mb-4" placeholder="Enter password"></td>
                             
                         </tr>
                         
@@ -92,28 +92,28 @@ div {
               
               
               <div class="back">
-                <form action="signup.php" method="POST">
+                <form action="signup.php" method="POST" class="form-inline">
                   <table>
                       <tr>
                           <td>Name</td>
-                          <td><input type="text" name="name" size="30" maxlength="30" placeholder="Enter your name"/></td>
+                          <td><input type="text" name="name" class="form-control mb-3" size="30" maxlength="30" placeholder="Enter your name"/></td>
                       </tr>
                       <tr>
                           <td>Password</td>
-                          <td><input type="password" name="password" maxlength="30" size="30"
+                          <td><input type="password" name="password" class="form-control mb-3" maxlength="30" size="30"
                               placeholder="Enter password"/></td>
                       </tr>
                       <tr>
                           <td>Email</td>
-                          <td><input type="email" name="email" placeholder="Enter a valid email ID" size="30"/></td>
+                          <td><input type="email" name="email" class="form-control mb-3" placeholder="Enter a valid email ID" size="30"/></td>
                       </tr>
                       <tr>
                           <td>Weight</td>
-                          <td><input type="text" name="weight" size="30" placeholder="Weight"/></td>
+                          <td><input type="text" name="weight" class="form-control mb-3" size="30" placeholder="Weight"/></td>
                       </tr>
                       <tr>
                           <td>Height</td>
-                          <td><input type="text" name="height" size="30" placeholder="Height"/></td>
+                          <td><input type="text" name="height" class="form-control mb-3" size="30" placeholder="Height"/></td>
                       </tr>
                       <tr>
                           <td colspan="2"><button type="submit" class="btn btn-primary" name="submit">SIGN UP</button></td>
@@ -142,6 +142,7 @@ div {
             document.getElementById('btn1').innerHTML = "SIGN UP";
           }
         }
+        
         
     </script>
 </html>
