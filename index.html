@@ -34,7 +34,7 @@ body {
   transition: transform 2s;
   transform-style: preserve-3d;
   cursor: pointer;
-  border-radius: 0px 0px 50px 50px;
+  border-radius: 50px 50px 0px 0px;
   
 }
 .front, .back {
@@ -44,9 +44,16 @@ body {
   justify-content: center;
   align-items: center;
   backface-visibility: hidden;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  border-radius: 0px 0px 50px 50px;
+  box-shadow: 0 0 8px 0 rgba(0,0,0,0.2);
+  border-radius: 50px 50px 0px 0px;
   
+  
+}
+.front,.back,.card{
+  background-image: url('bg1.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 .front {
   border: 0px solid black;
@@ -64,7 +71,7 @@ div {
   display:inline-block;
   width:100%;
   height:50px;
-  border-radius: 50px 50px 0px 0px;
+  border-radius: 0px 0px 50px 50px;
   font-size: larger;
   font-weight: bold;
   letter-spacing: 2px;
@@ -73,6 +80,9 @@ div {
 
 input{
   margin-left: 5px;
+}
+td{
+  font-weight: bold;
 }
 #submitbtn{
   width:40%;
@@ -88,9 +98,7 @@ h2{
     </head>
     <body>
         <div class="container">
-          <div style="height:50px;">
-            <button type="button" class="btn btn-primary" id="btn1" onclick="flip1()">Sign up?</button>
-          </div>
+          
           <div class="card">
               
              
@@ -156,7 +164,9 @@ h2{
             
               
             </div>
-            
+            <div style="height:50px;">
+              <button type="button" class="btn btn-primary" id="btn1" onclick="flip1()">Sign up?</button>
+            </div>
           </div>
           
     </body>
