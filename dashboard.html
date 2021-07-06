@@ -74,7 +74,7 @@
           
           <div class="back">
             <video src="Videos/The Perfect Push Up - Do it right!.mp4" width="90%" height="50%"></video>
-            <button class="btn btn-primary">Enter Picture-in-Picture</button>
+            <button class="btn btn-primary" onclick="pip(0)">Enter Picture-in-Picture</button>
           </div>
         
           </div>
@@ -89,7 +89,7 @@
             
             <div class="back">
               <video src="Videos/The Perfect Push Up - Do it right!.mp4" width="90%" height="50%"></video>
-              <button class="btn btn-primary">Enter Picture-in-Picture</button>
+              <button class="btn btn-primary" onclick="pip(1)">Enter Picture-in-Picture</button>
             </div>
           
             </div>
@@ -104,7 +104,7 @@
           
           <div class="back">
             <video src="Videos/The Perfect Push Up - Do it right!.mp4" width="90%" height="50%"></video>
-            <button class="btn btn-primary">Enter Picture-in-Picture</button>
+            <button class="btn btn-primary" onclick="pip(2)">Enter Picture-in-Picture</button>
           </div>
         
           </div>
@@ -120,7 +120,7 @@
           
           <div class="back">
             <video src="Videos/The Perfect Push Up - Do it right!.mp4" width="90%" height="50%"></video>
-            <button class="btn btn-primary">Enter Picture-in-Picture</button>
+            <button class="btn btn-primary" onclick="pip(3)">Enter Picture-in-Picture</button>
           </div>
           </div>
       </div>
@@ -139,7 +139,7 @@
             
             <div class="back">
               <video src="Videos/The Perfect Push Up - Do it right!.mp4" width="90%" height="50%"></video>
-              <button class="btn btn-primary">Enter Picture-in-Picture</button>
+              <button class="btn btn-primary" onclick="pip(4)">Enter Picture-in-Picture</button>
             </div>
             </div>
           </div>
@@ -154,7 +154,7 @@
               
               <div class="back">
                 <video src="Videos/The Perfect Push Up - Do it right!.mp4" width="90%" height="50%"></video>
-                <button class="btn btn-primary">Enter Picture-in-Picture</button>
+                <button class="btn btn-primary" onclick="pip(5)">Enter Picture-in-Picture</button>
               </div>
               </div>
           </div>
@@ -169,7 +169,7 @@
               
               <div class="back">
                 <video src="Videos/The Perfect Push Up - Do it right!.mp4" width="90%" height="50%"></video>
-                <button class="btn btn-primary">Enter Picture-in-Picture</button>
+                <button class="btn btn-primary" onclick="pip(6)">Enter Picture-in-Picture</button>
               </div>
               </div>
           </div>
@@ -184,7 +184,7 @@
               
               <div class="back">
                 <video src="Videos/The Perfect Push Up - Do it right!.mp4" width="90%" height="50%"></video>
-                <button class="btn btn-primary">Enter Picture-in-Picture</button>
+                <button class="btn btn-primary" onclick="pip(7)">Enter Picture-in-Picture</button>
               </div>
               </div>
           </div>
@@ -205,10 +205,11 @@
           element.style.transform = "rotateY(180deg)";
         }
     }
+    function pip(n) {
 
       //PIP PART
     const video = document.querySelector('video');
-    const button = document.querySelector('button');
+    const button = document.querySelectorAll('button')[n];
     button.addEventListener('click', () => {
     video.requestPictureInPicture()
             .then(() => { /**/ })
@@ -232,7 +233,7 @@ button.textContent = 'Exit Picture-in-Picture';
 video.addEventListener('leavepictureinpicture', () => {
 button.textContent = 'Enter Picture-in-Picture';
 });
-
+    }
 
   </script>
 </html>
