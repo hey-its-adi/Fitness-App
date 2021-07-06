@@ -1,33 +1,80 @@
-<html>
-    <head>
-        <title>
-            Dashboard
-        </title>
+<!DOCTYPE html>
+<head>
+    <title>
+        Dashboard
+    </title>
+    <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-        <link rel="stylesheet" href="style.css">
-        <style>
-          .column {
-            float: left;
-            width: 25%;
-            padding : 0px 0px;
-            height: 50%;
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" 
+        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" 
+        crossorigin="anonymous">
+    <style>
+        .flip-card{
+            width:400px;
+            height:400px;
+            cursor:pointer;
+            background-color: transparent;
+            perspective: 1000px;
+            float:left;
+            margin:50px auto;
+            border-radius: 50px;
+        }
+        .flip-card-inner{
+            position:relative;
+            width:100%;
+            height:100%;
+            text-align: center;
+            transition: transform 2s;
+            transform-style:preserve-3d;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            border-radius: 50px;
+        }
+        .flip-front , .flip-back{
+            position:absolute;
+            width:100%;
+            height:100%;
+            backface-visibility: hidden;
+            -webkit-backface-visibility: hidden;
+            border-radius: 50px;
+        }
+        .flip-back{
+            transform:rotateY(180deg);
+        }
+        .flip-front img{
+            border-radius: 50px 50px 0px 0px;
+        }
+        .flip-back video{
+            border-radius: 50px 50px 0px 0px;
+        }
+        .carousel-item{
+            width:100%;
+            height:400px;
           }
-          .row {
-            margin: 0px 0px 0px -4%;
+          .carousel-item img{
+            width:100%;
+            height:400px;
           }
-          .row:after {
-              content: "";
-              display: table;
-              clear: both;
+          h1,h2{
+              text-align: center;
           }
-        </style>
-    </head>
-    
-    <body>
-      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+          h2{
+              color:darkgrey;
+          }
+          @media screen and (max-width:600px) {
+              .img-fluid{
+                  width:100%;
+                  height:300px;
+              }
+          }
+    </style>    
+</head>
+<body>
+    <div class="container-fluid">
+    <div id="myCarousel" class="carousel slide img-fluid" data-ride="carousel">
         <!-- Indicators -->
         <ol class="carousel-indicators">
           <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -37,206 +84,187 @@
         </ol>
       
         <!-- Wrapper for slides -->
-        <div class="carousel-inner">
-          <div class="item active">
-            <img src="Images/The only way to finish is to start.png" alt="pic1" style="width: 8000px; height: 400px;">
+        <div class="carousel-inner img-fluid">
+          <div class="carousel-item active img-fluid">
+            <img src="Images/The only way to finish is to start.png" alt="pic1" class="img-fluid">
           </div>
       
-         <div class="item">
-            <img src="Images/You might hate doing it, but you will love finishing it.”.png" alt="pic2" style="width: 8000px; height: 400px;">
+         <div class="carousel-item">
+            <img src="Images/You might hate doing it, but you will love finishing it.”.png" alt="pic2" class="img-fluid">
           </div>
       
-          <div class="item">
-            <img src="Images/No alarm clock needed. my passion wakes me up..png" alt="pic3" style="width: 8000px; height: 400px;">
+          <div class="carousel-item">
+            <img src="Images/No alarm clock needed. my passion wakes me up..png" alt="pic3" class="img-fluid">
           </div>
-          <div class="item">
-            <img src="Images/just for you.png" alt="pic3" style="width: 8000px; height: 400px;">
+          <div class="carousel-item">
+            <img src="Images/just for you.png" alt="pic4" class="img-fluid">
           </div>
         </div>
       
         <!-- Left and right controls -->
-        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-          <span class="glyphicon glyphicon-chevron-left"></span>
-          <span class="sr-only">Previous</span>
+        <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+          
         </a>
-        <a class="right carousel-control" href="#myCarousel" data-slide="next">
-          <span class="glyphicon glyphicon-chevron-right"></span>
-          <span class="sr-only">Next</span>
+        <a class="carousel-control-next" href="#myCarousel" data-slide="next">
+          <span class="carousel-control-next-icon"></span>
+          
         </a>
       </div>
+
+    <h1>Your BMI is: <i>22</i></h1>
+    <h2>Your state of health is:<i>Fit and healthy</i></h2>
+
+
+    <div class="flip-card col-sm-6 col-md-4 col-lg-3" onclick="flip(0)">
+        <div class="flip-card-inner">
+            <div class="flip-front">
+                <img src="Images/gym.jpeg" alt="gym" width="100%">
+                <h3>Heading</h3>
+                <p>Paragraph and description</p>
+            </div>
+            <div class="flip-back">
+                <video src="Videos/The Perfect Push Up - Do it right!.mp4" width="100%"></video>
+                <button type="button" id="btn1" class="btn btn-primary" onclick="pip(0)">Enter picure in picture</button>
+            </div>
+        </div>
+    </div>
+    <div class="flip-card col-sm-6 col-md-4 col-lg-3" onclick="flip(1)">
+        <div class="flip-card-inner">
+            <div class="flip-front">
+                <img src="Images/gym.jpeg" alt="gym" width="100%">
+                <h3>Heading</h3>
+                <p>Paragraph and description</p>
+            </div>
+            <div class="flip-back">
+                <video src="Videos/The Perfect Push Up - Do it right!.mp4" width="100%"></video>
+                <button type="button" id="btn1" class="btn btn-primary" onclick="pip(0)">Enter picure in picture</button>
+            </div>
+        </div>
+    </div>
+    <div class="flip-card col-sm-6 col-md-4 col-lg-3" onclick="flip(2)">
+        <div class="flip-card-inner">
+            <div class="flip-front">
+                <img src="Images/gym.jpeg" alt="gym" width="100%">
+                <h3>Heading</h3>
+                <p>Paragraph and description</p>
+            </div>
+            <div class="flip-back">
+                <video src="Videos/The Perfect Push Up - Do it right!.mp4" width="100%"></video>
+                <button type="button" id="btn1" class="btn btn-primary" onclick="pip(0)">Enter picure in picture</button>
+            </div>
+        </div>
+    </div>
+    <div class="flip-card col-sm-6 col-md-4 col-lg-3" onclick="flip(3)">
+        <div class="flip-card-inner">
+            <div class="flip-front">
+                <img src="Images/gym.jpeg" alt="gym" width="100%">
+                <h3>Heading</h3>
+                <p>Paragraph and description</p>
+            </div>
+            <div class="flip-back">
+                <video src="Videos/The Perfect Push Up - Do it right!.mp4" width="100%"></video>
+                <button type="button" id="btn1" class="btn btn-primary" onclick="pip(0)">Enter picure in picture</button>
+            </div>
+        </div>
+    </div>
+    <div class="flip-card col-sm-6 col-md-4 col-lg-3" onclick="flip(4)">
+        <div class="flip-card-inner">
+            <div class="flip-front">
+                <img src="Images/gym.jpeg" alt="gym" width="100%">
+                <h3>Heading</h3>
+                <p>Paragraph and description</p>
+            </div>
+            <div class="flip-back">
+                <video src="Videos/The Perfect Push Up - Do it right!.mp4" width="100%"></video>
+                <button type="button" id="btn1" class="btn btn-primary" onclick="pip(0)">Enter picure in picture</button>
+            </div>
+        </div>
+    </div>
+    <div class="flip-card col-sm-6 col-md-4 col-lg-3" onclick="flip(5)">
+        <div class="flip-card-inner">
+            <div class="flip-front">
+                <img src="Images/gym.jpeg" alt="gym" width="100%">
+                <h3>Heading</h3>
+                <p>Paragraph and description</p>
+            </div>
+            <div class="flip-back">
+                <video src="Videos/The Perfect Push Up - Do it right!.mp4" width="100%"></video>
+                <button type="button" id="btn1" class="btn btn-primary" onclick="pip(0)">Enter picure in picture</button>
+            </div>
+        </div>
+    </div>
+    <div class="flip-card col-sm-6 col-md-4 col-lg-3" onclick="flip(6)">
+        <div class="flip-card-inner">
+            <div class="flip-front">
+                <img src="Images/gym.jpeg" alt="gym" width="100%">
+                <h3>Heading</h3>
+                <p>Paragraph and description</p>
+            </div>
+            <div class="flip-back">
+                <video src="Videos/The Perfect Push Up - Do it right!.mp4" width="100%"></video>
+                <button type="button" id="btn1" class="btn btn-primary" onclick="pip(0)">Enter picure in picture</button>
+            </div>
+        </div>
+    </div>
+    <div class="flip-card col-sm-6 col-md-4 col-lg-3" onclick="flip(7)">
+        <div class="flip-card-inner">
+            <div class="flip-front">
+                <img src="Images/gym.jpeg" alt="gym" width="100%">
+                <h3>Heading</h3>
+                <p>Paragraph and description</p>
+            </div>
+            <div class="flip-back">
+                <video src="Videos/The Perfect Push Up - Do it right!.mp4" width="100%"></video>
+                <button type="button" id="btn1" class="btn btn-primary" onclick="pip(0)">Enter picure in picture</button>
+            </div>
+        </div>
+    </div>
+    </div>
+    
+
+        
+  
+     <script>
+        
+        function flip(i) {
+          var element = document.getElementsByClassName("flip-card-inner")[i];
+            if(element.style.transform == "rotateY(180deg)") {
+            element.style.transform = "rotateY(0deg)";
+          }
+          else {
+            element.style.transform = "rotateY(180deg)";
+          }
+      }
+      function pip(n) {
+  
+        //PIP PART
+      const video = document.querySelector('video');
+      const button = document.querySelectorAll('button')[n];
+      video.requestPictureInPicture()
+              .then(() => { /**/ })
+              .catch(() => { /**/ });
+  
+  
+      if (document.pictureInPictureElement) {
+      document.exitPictureInPicture()
+      .then(() => { /**/ })
+      .catch(() => { /**/ });
+      } else {
+          // Request Picture-in-Picture
+      }
+  
       
-      <h2 style="text-align: center; margin-top: 7%;">Your BMI is</h2>
-
-      <div class="row" style="margin-top: 7%;">
-      <div class="column">
-        <div class="card" onclick="flip(0)">
-         
-          <div class="front">
-            <img src="Images/gym.jpeg" alt="gym" width="100%" height="200px" class="image">
-            <p></p>
-          </div>
-          
-          <div class="back">
-            <video src="Videos/The Perfect Push Up - Do it right!.mp4" width="90%" height="50%"></video>
-            <button class="btn btn-primary" onclick="pip(0)">Enter Picture-in-Picture</button>
-          </div>
-        
-          </div>
-      </div>
-          <div class="column">      
-            <div class="card" onclick="flip(1)">
-         
-            <div class="front">
-              <img src="Images/gym.jpeg" alt="gym" width="100%" height="200px" class="image">
-              <p></p>
-            </div>
-            
-            <div class="back">
-              <video src="Videos/The Perfect Push Up - Do it right!.mp4" width="90%" height="50%"></video>
-              <button class="btn btn-primary" onclick="pip(1)">Enter Picture-in-Picture</button>
-            </div>
-          
-            </div>
-       </div>
-       <div class="column">
-        <div class="card" onclick="flip(2)">
-         
-          <div class="front">
-            <img src="Images/gym.jpeg" alt="gym" width="100%" height="200px" class="image">
-            <p></p>
-          </div>
-          
-          <div class="back">
-            <video src="Videos/The Perfect Push Up - Do it right!.mp4" width="90%" height="50%"></video>
-            <button class="btn btn-primary" onclick="pip(2)">Enter Picture-in-Picture</button>
-          </div>
-        
-          </div>
-       </div>
-
-       <div class="column">
-        <div class="card" onclick="flip(3)">
-     
-          <div class="front">
-            <img src="Images/gym.jpeg" alt="gym" width="100%" height="200px" class="image">
-            <p></p>
-          </div>
-          
-          <div class="back">
-            <video src="Videos/The Perfect Push Up - Do it right!.mp4" width="90%" height="50%"></video>
-            <button class="btn btn-primary" onclick="pip(3)">Enter Picture-in-Picture</button>
-          </div>
-          </div>
-      </div>
-       </div>
       
-    
-       <div class="row" style="margin-top: -15%;">
-         <div class="column">
-             
-          <div class="card" onclick="flip(4)">
-         
-            <div class="front">
-              <img src="Images/gym.jpeg" alt="gym" width="100%" height="200px" class="image">
-              <p></p>
-            </div>
-            
-            <div class="back">
-              <video src="Videos/The Perfect Push Up - Do it right!.mp4" width="90%" height="50%"></video>
-              <button class="btn btn-primary" onclick="pip(4)">Enter Picture-in-Picture</button>
-            </div>
-            </div>
-          </div>
-
-          <div class="column">
-            <div class="card" onclick="flip(5)">
-         
-              <div class="front">
-                <img src="Images/gym.jpeg" alt="gym" width="100%" height="200px" class="image">
-                <p></p>
-              </div>
-              
-              <div class="back">
-                <video src="Videos/The Perfect Push Up - Do it right!.mp4" width="90%" height="50%"></video>
-                <button class="btn btn-primary" onclick="pip(5)">Enter Picture-in-Picture</button>
-              </div>
-              </div>
-          </div>
-          
-          <div class="column">
-            <div class="card" onclick="flip(6)">
-         
-              <div class="front">
-                <img src="Images/gym.jpeg" alt="gym" width="100%" height="200px" class="image">
-                <p></p>
-              </div>
-              
-              <div class="back">
-                <video src="Videos/The Perfect Push Up - Do it right!.mp4" width="90%" height="50%"></video>
-                <button class="btn btn-primary" onclick="pip(6)">Enter Picture-in-Picture</button>
-              </div>
-              </div>
-          </div>
-
-          <div class="column">
-            <div class="card" onclick="flip(7)">
-         
-              <div class="front">
-                <img src="Images/gym.jpeg" alt="gym" width="100%" height="200px" class="image">
-                <p></p>
-              </div>
-              
-              <div class="back">
-                <video src="Videos/The Perfect Push Up - Do it right!.mp4" width="90%" height="50%"></video>
-                <button class="btn btn-primary" onclick="pip(7)">Enter Picture-in-Picture</button>
-              </div>
-              </div>
-          </div>
-
-          
-          
-       </div>
-    </body>
-
-    <script>
-        
-      function flip(i) {
-        var element = document.getElementsByClassName("card")[i];
-          if(element.style.transform == "rotateY(180deg)") {
-          element.style.transform = "rotateY(0deg)";
-        }
-        else {
-          element.style.transform = "rotateY(180deg)";
-        }
-    }
-    function pip(n) {
-
-      //PIP PART
-    const video = document.querySelector('video');
-    const button = document.querySelectorAll('button')[n];
-    video.requestPictureInPicture()
-            .then(() => { /**/ })
-            .catch(() => { /**/ });
-
-
-    if (document.pictureInPictureElement) {
-    document.exitPictureInPicture()
-    .then(() => { /**/ })
-    .catch(() => { /**/ });
-    } else {
-        // Request Picture-in-Picture
-    }
-
-    
-    
-video.addEventListener('enterpictureinpicture', () => {
-button.textContent = 'Exit Picture-in-Picture';
-});
-
-video.addEventListener('leavepictureinpicture', () => {
-button.textContent = 'Enter Picture-in-Picture';
-});
-    }
-
-  </script>
+  video.addEventListener('enterpictureinpicture', () => {
+  button.textContent = 'Exit Picture-in-Picture';
+  });
+  
+  video.addEventListener('leavepictureinpicture', () => {
+  button.textContent = 'Enter Picture-in-Picture';
+  });
+      }
+  
+    </script>
+     </body>
 </html>
