@@ -19,8 +19,8 @@ body{
     transform-style: preserve-3d;
     cursor: pointer;
     margin-top: 35%;
-    height: 90%;
-    width: 120%;
+    height: 100%;
+    width: 130%;
   }
   .front, .back {
     position: absolute;
@@ -56,4 +56,7 @@ body{
   }
   .image{
       border-radius: 30px 30px 0px 0px;
+  }
+body {
+    overflow-x: hidden;
   }
