@@ -8,6 +8,23 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="style.css">
+        <style>
+          .column {
+            float: left;
+            width: 25%;
+            padding: 0 10px;
+            height: 50%;
+          }
+          .row {
+            margin: 0 -5px;
+            margin-left: 10%;
+          }
+          .row:after {
+              content: "";
+              display: table;
+              clear: both;
+          }
+        </style>
     </head>
     
     <body>
@@ -45,10 +62,41 @@
         </a>
       </div>
       
-      <h2>Your bmi is</h2>
+      <h2 style="text-align: center">Your BMI is</h2>
 
-      <div class="container">
-        <div class="card" onclick="flip()">
+      <div class="row">
+      <div class="column">
+        <div class="card" onclick="flip(0)">
+         
+          <div class="front">
+            <img src="Images/gym.jpeg" alt="gym" width="100%" height="200px" class="image">
+            <p></p>
+          </div>
+          
+          <div class="back">
+            <video src="Videos/The Perfect Push Up - Do it right!.mp4" width="100%" height="50%"></video>
+            <button class="btn btn-primary">Enter Picture-in-Picture</button>
+          </div>
+        
+          </div>
+      </div>
+          <div class="column">      
+            <div class="card" onclick="flip(1)">
+         
+            <div class="front">
+              <img src="Images/gym.jpeg" alt="gym" width="100%" height="200px" class="image">
+              <p></p>
+            </div>
+            
+            <div class="back">
+              <video src="Videos/The Perfect Push Up - Do it right!.mp4" width="100%" height="50%"></video>
+              <button class="btn btn-primary">Enter Picture-in-Picture</button>
+            </div>
+          
+            </div>
+       </div>
+       <div class="column">
+        <div class="card" onclick="flip(2)">
          
           <div class="front">
             <img src="Images/gym.jpeg" alt="gym" width="100%" height="200px" class="image">
@@ -66,15 +114,15 @@
 
     <script>
         
-      function flip() {
-        var element = document.getElementsByClassName('card')[0];
-        if(element.style.transform == "rotateY(180deg)") {
+      function flip(i) {
+        var element = document.getElementsByClassName("card")[i];
+          if(element.style.transform == "rotateY(180deg)") {
           element.style.transform = "rotateY(0deg)";
         }
         else {
           element.style.transform = "rotateY(180deg)";
         }
-      }
+    }
 
       //PIP PART
     const video = document.querySelector('video');
