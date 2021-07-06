@@ -170,23 +170,24 @@ h2{
               <button type="button" class="btn btn-primary" id="btn1" onclick="flip1()">Signup?</button>
             </div>
           </div>
-          
+    
+          <script>
+        
+            function flip1() {
+              var element = document.getElementsByClassName('cardo')[0];
+              if (element.style.transform != "rotateY(180deg)") {
+                element.style.transform = "rotateY(180deg)";
+                document.getElementById('btn1').innerHTML = "Login?";
+              } else {
+                element.style.transform = "rotateY(0deg)";
+                document.getElementById('btn1').innerHTML = "Signup?";
+              }
+            }
+            
+            
+        </script>
     </body>
     
     
-    <script>
-        
-        function flip1() {
-          var element = document.getElementsByClassName('cardo')[0];
-          if (element.style.transform != "rotateY(180deg)") {
-            element.style.transform = "rotateY(180deg)";
-            document.getElementById('btn1').innerHTML = "Login?";
-          } else {
-            element.style.transform = "rotateY(0deg)";
-            document.getElementById('btn1').innerHTML = "Signup?";
-          }
-        }
-        
-        
-    </script>
+    
 </html>
