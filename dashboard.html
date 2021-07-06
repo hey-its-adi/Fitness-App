@@ -210,11 +210,10 @@
       //PIP PART
     const video = document.querySelector('video');
     const button = document.querySelectorAll('button')[n];
-    button.addEventListener('click', () => {
     video.requestPictureInPicture()
             .then(() => { /**/ })
             .catch(() => { /**/ });
-    });
+
     button.addEventListener('click', () => {
     if (document.pictureInPictureElement) {
     document.exitPictureInPicture()
