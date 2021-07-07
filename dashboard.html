@@ -12,10 +12,11 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" 
         integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" 
         crossorigin="anonymous">
+        <script src="https://kit.fontawesome.com/995dbfc1ce.js" crossorigin="anonymous"></script>
     <style>
         .flip-card{
             width:400px;
-            height:500px;
+            height:520px;
             cursor:pointer;
             background-color: transparent;
             perspective: 1000px;
@@ -149,7 +150,7 @@
                     2.Pushing through your feet and bracing your core, raise your bottom off the ground until your hips are fully extended, squeezing your glutes at the top.<br>
                     3.Slowly return to the starting position and repeat.
                 </p>
-                <button type="button" id="btn1" class="btn btn-primary" onclick="pip(0)">Coach Cam</button>
+                <button type="button" id="btn1" class="btn btn-primary" onclick="pip(0)">Coach Cam <i class="fa fa-video-camera"></i></button>
             </div>
         </div>
     </div>
@@ -170,7 +171,7 @@
 2.Hinging at your hips and bending your knees, lower back and down until your bottom touches the chair, allowing your arms to extend out in front of you.<br>
 3.Push up through your heels and return to the starting position.
                 </p>
-                <button type="button" id="btn1" class="btn btn-primary" onclick="pip(1)">Coach Cam</button>
+                <button type="button" id="btn1" class="btn btn-primary" onclick="pip(1)">Coach Cam <i class="fa fa-video-camera"></i></button>
             </div>
         </div>
     </div>
@@ -189,7 +190,7 @@
                     1.Assume a plank position on your forearms. Your body should form a straight line from head to feet.<br>
                     2.Ensure your lower back and hips don’t sag. Hold the position for 30 seconds to 1 minute.
                 </p>
-                <button type="button" id="btn1" class="btn btn-primary" onclick="pip(2)">Coach Cam</button>
+                <button type="button" id="btn1" class="btn btn-primary" onclick="pip(2)">Coach Cam <i class="fa fa-video-camera"></i></button>
             </div>
         </div>
     </div>
@@ -210,7 +211,7 @@
 2.Crunch up and bring your right elbow to your left knee, straightening your right leg.<br>
 3.Release the crunch slightly. Bend your right leg and straighten your left leg, then bring your left elbow to your right knee.
                 </p>
-                <button type="button" id="btn1" class="btn btn-primary" onclick="pip(3)">Coach Cam</button>
+                <button type="button" id="btn1" class="btn btn-primary" onclick="pip(3)">Coach Cam <i class="fa fa-video-camera"></i></button>
             </div>
         </div>
     </div>
@@ -232,7 +233,7 @@
 3.Push back up to start.
 
                 </p>
-                <button type="button" id="btn1" class="btn btn-primary" onclick="pip(4)">Coach Cam</button>
+                <button type="button" id="btn1" class="btn btn-primary" onclick="pip(4)">Coach Cam <i class="fa fa-video-camera"></i></button>
             </div>
         </div>
     </div>
@@ -253,7 +254,7 @@
 2.Keeping your core engaged and your hands and feet stationary, pike your hips up and back into the Downward Dog pose.<br>
 3.Hold here for a second, then return to the plank. Repeat.
                 </p>
-                <button type="button" id="btn1" class="btn btn-primary" onclick="pip(5)">Coach Cam</button>
+                <button type="button" id="btn1" class="btn btn-primary" onclick="pip(5)">Coach Cam <i class="fa fa-video-camera"></i></button>
             </div>
         </div>
     </div>
@@ -274,7 +275,7 @@
 2.Bend your knees and lunge, stopping when your right thigh is parallel to the ground.<br>
 3.Push up through your right foot to return to the starting position. Repeat for desired number of reps, then switch legs.
                 </p>
-                <button type="button" id="btn1" class="btn btn-primary" onclick="pip(6)">Coach Cam</button>
+                <button type="button" id="btn1" class="btn btn-primary" onclick="pip(6)">Coach Cam <i class="fa fa-video-camera"></i></button>
             </div>
         </div>
     </div>
@@ -295,7 +296,7 @@
 2.Keeping your back straight, push your right foot out to the imaginary wall behind you while keeping your leg straight.<br>
 3.Your foot should remain flexed throughout. Squeeze your buttocks at the top.
                 </p>
-                <button type="button" id="btn1" class="btn btn-primary" onclick="pip(7)">Coach Cam</button>
+                <button type="button" id="btn1" class="btn btn-primary" onclick="pip(7)">Coach Cam <i class="fa fa-video-camera"></i></button>
             </div>
         </div>
     </div>
@@ -336,11 +337,11 @@
       
       
   video.addEventListener('enterpictureinpicture', () => {
-  button.textContent = 'Exit Coach Cam';
+  button.innerHTML = 'Exit Coach Cam' + ' ' + '<i class="fa fa-sign-out"></i>';
   });
   
   video.addEventListener('leavepictureinpicture', () => {
-  button.textContent = 'Coach Cam';
+  button.innerHTML = 'Coach Cam' + ' ' + '<i class="fa fa-video-camera"></i>';
   });
   flip(n);      
 }
