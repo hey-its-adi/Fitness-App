@@ -125,20 +125,20 @@
             </div>
             <div class="flip-back">
                 <video src="Videos/The Perfect Push Up - Do it right!.mp4" width="100%"></video>
-                <button type="button" id="btn1" class="btn btn-primary" onclick="pip(0)">Enter picure in picture</button>
+                <button type="button" id="btn1" class="btn btn-primary" onclick="pip(0)">Coach Cam</button>
             </div>
         </div>
     </div>
     <div class="flip-card col-sm-6 col-md-4 col-lg-3" onclick="flip(1)">
         <div class="flip-card-inner">
             <div class="flip-front">
-                <img src="Images/chair_squat.gif" alt="gym" width="100%">
+                <img src="Images/chair squat.gif" alt="gym" width="100%">
                 <h3>Chair Squat</h3>
                 <p>Paragraph and description</p>
             </div>
             <div class="flip-back">
                 <video src="Videos/The Perfect Push Up - Do it right!.mp4" width="100%"></video>
-                <button type="button" id="btn1" class="btn btn-primary" onclick="pip(0)">Enter picure in picture</button>
+                <button type="button" id="btn1" class="btn btn-primary" onclick="pip(0)">Coach Cam</button>
             </div>
         </div>
     </div>
@@ -151,7 +151,7 @@
             </div>
             <div class="flip-back">
                 <video src="Videos/The Perfect Push Up - Do it right!.mp4" width="100%"></video>
-                <button type="button" id="btn1" class="btn btn-primary" onclick="pip(0)">Enter picure in picture</button>
+                <button type="button" id="btn1" class="btn btn-primary" onclick="pip(0)">Coach Cam</button>
             </div>
         </div>
     </div>
@@ -164,7 +164,7 @@
             </div>
             <div class="flip-back">
                 <video src="Videos/The Perfect Push Up - Do it right!.mp4" width="100%"></video>
-                <button type="button" id="btn1" class="btn btn-primary" onclick="pip(0)">Enter picure in picture</button>
+                <button type="button" id="btn1" class="btn btn-primary" onclick="pip(0)">Coach Cam</button>
             </div>
         </div>
     </div>
@@ -177,7 +177,7 @@
             </div>
             <div class="flip-back">
                 <video src="Videos/The Perfect Push Up - Do it right!.mp4" width="100%"></video>
-                <button type="button" id="btn1" class="btn btn-primary" onclick="pip(0)">Enter picure in picture</button>
+                <button type="button" id="btn1" class="btn btn-primary" onclick="pip(0)">Coach Cam</button>
             </div>
         </div>
     </div>
@@ -190,7 +190,7 @@
             </div>
             <div class="flip-back">
                 <video src="Videos/The Perfect Push Up - Do it right!.mp4" width="100%"></video>
-                <button type="button" id="btn1" class="btn btn-primary" onclick="pip(0)">Enter picure in picture</button>
+                <button type="button" id="btn1" class="btn btn-primary" onclick="pip(0)">Coach Cam</button>
             </div>
         </div>
     </div>
@@ -203,7 +203,7 @@
             </div>
             <div class="flip-back">
                 <video src="Videos/The Perfect Push Up - Do it right!.mp4" width="100%"></video>
-                <button type="button" id="btn1" class="btn btn-primary" onclick="pip(0)">Enter picure in picture</button>
+                <button type="button" id="btn1" class="btn btn-primary" onclick="pip(0)">Coach Cam</button>
             </div>
         </div>
     </div>
@@ -216,7 +216,7 @@
             </div>
             <div class="flip-back">
                 <video src="Videos/The Perfect Push Up - Do it right!.mp4" width="100%"></video>
-                <button type="button" id="btn1" class="btn btn-primary" onclick="pip(0)">Enter picure in picture</button>
+                <button type="button" id="btn1" class="btn btn-primary" onclick="pip(0)">Coach Cam</button>
             </div>
         </div>
     </div>
@@ -239,7 +239,7 @@
       function pip(n) {
   
         //PIP PART
-      const video = document.querySelector('video');
+      const video = document.querySelectorAll('video')[n];
       const button = document.querySelectorAll('button')[n];
       video.requestPictureInPicture()
               .then(() => { /**/ })
