@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Food and diet
+        </title>
+        <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+            <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" 
+            integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" 
+            crossorigin="anonymous">
+            <script src="https://kit.fontawesome.com/995dbfc1ce.js" crossorigin="anonymous"></script>
+            <style>
+                body{
+                    background-color: black;
+                }
+                .flip-card{
+            height:600px;
+            cursor:pointer;
+            background-color: transparent;
+            perspective: 1000px;
+            float:left;
+            margin:50px auto;
+            border-radius: 50px;
+        }
+        .flip-card-inner{
+            position:relative;
+            width:100%;
+            height:100%;
+            text-align: center;
+            transition: transform 2s;
+            transform-style:preserve-3d;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            border-radius: 50px;
+        }
+        .flip-front , .flip-back{
+            position:absolute;
+            width:100%;
+            height:100%;
+            backface-visibility: hidden;
+            -webkit-backface-visibility: hidden;
+            border-radius: 50px;
+        }
+        .flip-back{
+            transform:rotateY(180deg);
+        }
+        .flip-front img{
+            border-radius: 50px 50px 0px 0px;
+            height:350px;
+        }
+        .workout{
+            width:90%;
+            margin:auto;
+        }
+        .workout h2{
+            text-align: center;
+            padding:1%;
+            color:gold;
+        }
+        .workout p{
+            text-align: center;
+            border-bottom: 2px solid white;
+            padding:5%;
+            font-size: large;
+        }
+        h5{
+            color:gold;
+        }
+        table{
+            width:100%;
+        }
+        th{
+            width:25%;
+        }
+        td{
+            width:75%;
+            padding-left: 10px;
+        }
+        tr:hover{
+            color:black;
+            background-color: gold;
+        }
+        table tr{
+            border-top: 1px solid white;
+            height:50px;
+            color:white;
+        }
+        .intro{
+            width:100%;
+            
+            padding:100px;
+            background-image: url('Images/food\ intro.jpg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size:cover;
+        }
+        .intro h2 , #one{
+            width:50%;
+            margin:auto;
+            text-align: center;
+            color:white;
+            font-size: 3em;
+            font-family: cursive;
+        }
+        .flip-card p{
+            font-size: large;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            padding:20px;
+            text-align: center;
+            height:100%;
+            line-height: 40px;
+        }
+        .flip-card h3{
+            margin:20px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        .flip-card h3::first-letter{
+            font-size: 1.5em;
+        }
+        .flip-front , .flip-back{
+            background-color: gold;
+        }
+        h1,h2,h3,h4,h5,p{
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        .fa{
+            color:white;
+            font-size: xx-large;
+            display:inline-block;
+            margin:20px;
+        }
+        .fa-facebook:hover{
+            color:dodgerblue;
+        }
+        .fa-instagram:hover{
+            color:purple;
+        }
+        .fa-youtube:hover{
+            color:red;
+        }
+        .fa-linkedin:hover{
+            color:royalblue;
+        }
+        .footer{
+            width:100%;
+            height:200px;
+            padding:50px auto;
+        }
+        </style>
+    </head>
+    <body>
+        <div class="intro">
+            <h2>Welcome to the Food and Dietetics Section of our website.</h2>
+        </div>
+        <h2 style="color:gold;text-align: center;font-family: cursive;margin-top:20px;">
+            Your path to a fit and happy life :)
+        </h2>
+        <h3><marquee scrollamount="20"><a href="#ideal" class="text-light" style="text-decoration: none;">Wanna see our Ideal 7-Day Diet Chart?</a></marquee></h3>
+            
+        <div class="flip-card col-sm-4" onmouseover="flip(0)" onmouseout="flip(0)">
+            <div class="flip-card-inner bg-light">
+                <div class="flip-front">
+                    <img src="Images/carbohydrates-1.jpg" alt="carbohydrates" width="100%">
+                    <h3>Carbohydrates</h3>
+                    <p> Carbohydrates are the primary source of energy for the body and
+                         therefore play the most substantial role in fueling exercise.</p>
+                </div>
+                <div class="flip-back">
+                    <p>There are two different types of carbohydrates – complex and simple.
+                         The names give an indication of the time taken to digest; complex carbs take a longer time period
+                          to digest than simple carbs.
+                        Complex carbohydrates provide the body with prolonged slow-release of energy and have a great
+                         nutritional benefit. While simple carbohydrates provide the body with a short-term, fast
+                          releasing energy, they contain little nutritional value.
+                        For this reason, you should look to primarily consume complex carbohydrates. 
+                        Some foods to consider adding to your diet include whole-grains, oats, beans, nuts, fruits, and vegetables.</p>
+                </div>
+            </div>
+        </div>
+        <div class="flip-card col-sm-4" onmouseover="flip(1)" onmouseout="flip(1)">
+            <div class="flip-card-inner bg-light">
+                <div class="flip-front">
+                    <img src="Images/protein-1-1.jpg" alt="proteins" width="100%">
+                    <h3>Proteins</h3>
+                    <p>The majority of fitness freaks will be well aware that consuming protein is important.</p>
+                </div>
+                <div class="flip-back">
+                    <p>The reason why protein is so important is that, it plays a key role in recovery and repair.
+                         During exercise, the body is exposed to strains and stresses which cause damage to occur to
+                          the muscles at a microscopic level. In order for the damage to be repaired, protein is needed.
+                           Without it, recovery periods will be extended and chronic fatigue may become a factor.
+                        Protein is found most highly in animal produce such as lean meats, eggs & dairy.
+                         It can also be found in smaller quantities in foods such as seeds, nuts, legumes, beans, and soy.</p>
+                </div>
+            </div>
+        </div>
+        <div class="flip-card col-sm-4" onmouseover="flip(2)" onmouseout="flip(2)">
+            <div class="flip-card-inner bg-light">
+                <div class="flip-front">
+                    <img src="Images/healthy-fats-1.jpg" alt="fats" width="100%">
+                    <h3>Healthy Fats</h3>
+                    <p>Fats are often incorrectly seen as the primary reason for fat gain. However, fats are not responsible for this.</p>
+                </div>
+                <div class="flip-back">
+                    <p>Fats actually play a key role in the absorption and transport of nutrients. In addition, they can have a positive impact on heart health and hormone production.
+                     Fats actually can have a positive impact on health, there are several types of fat –
+                      some of which are of greater benefit than others. While saturated fats are not as
+                       harmful as once believed, focus primarily on unsaturated fats. Unsaturated fat foods
+                        include avocados, seeds, nuts, peanut butter, fish (salmon, tuna, mackerel), 
+                        oils (olive, peanut, sesame), and soy products (tofu, soy milk).</p>
+                </div>
+            </div>
+        </div>
+        <div class="workout">
+        <h2>Pre-Workout Foods</h2>
+        <p class="text-light">The focus with all pre-workout meals or snacks should be carbohydrates to provide the body with plenty of energy to last the full session. If energy levels are sub-optimal, then performance will suffer which will have a consequent impact on our rate of adaptation.
+            To prime the body for performance, focus on primarily consuming complex carbohydrates such as whole-grains, oats, beans, nuts, fruits, and vegetables. Be aware not to consume them just before the workout as they take time to digest. The recommendation is to consume complex carbs one to two hours prior to exercise to allow for full digestion.
+            From that point, focus on simple carbohydrates as they take less time to digest and provide the body with bursts of energy. It may even be recommended to consume some simple carbs during a workout to maintain energy levels and performance.
+            White bread, jam, granola, cereal, rice cakes, sports drinks, and fruit are all viable options for a pre-workout, energy-boosting snack.
+            While the focus should predominantly be on carbohydrates, it is also important to consume some protein prior to stepping into the gym. To support muscle recovery and growth, protein levels should be maintained at a high level throughout each day.
+        </p>
+        </div>
+        <div class="workout">
+            <h2>
+                Post-Workout Foods
+            </h2>
+            <p class="text-light">
+                The purpose of post-workout nutrition is two-fold – to promote muscle recovery and replenish energy. Therefore, the focus should once again be on consuming good quality protein and carb foods.
+As reflected on, the stress of training cause micro tears to occur to the muscles that must be repaired. Consuming protein will cause a process known as muscle protein synthesis (MPS) to occur which will begin the repairing process and prevent muscle breakdown.
+There is a widely held belief that protein timing is extremely important for maximizing growth, however, a number of studies have indicated that total daily protein intake is of greater importance than the timing.
+High-protein foods such as lean beef, chicken, pork, turkey, eggs, dairy, seeds, quinoa, and nuts should be prioritized. Protein supplements, like protein shakes and bars, can serve as a convenient tool for effectively boosting protein intake.
+Carbohydrates should also form part of post-workout nutrition as the energy that has been expended during exercise must be replaced.
+If possible, it is recommended to consume protein and carbs together as this will have the most pronounced impact on recovery by enhancing protein and glycogen (energy) synthesis. Often a ratio of 3:1 carb to protein is prescribed for optimizing recovery.
+            </p>
+        </div>
+        <div class="workout">
+            <h2 id="ideal">
+                Ideal 7-Day Diet Chart
+            </h2>
+            <p class="text-light">
+                While calories and macronutrients are important, the ideal fitness diet will be one that positively influences health. This is a diet that is rich in vitamins and minerals where all three macronutrients are consumed and nutrient-sparse foods are restricted.
+                Vegetarians and vegans can exclude meat and other non-veg foods in their diet and can plan accordingly.
+            </p>
+            <h5>Day 1</h5>
+            <table>
+                <tr>
+                    <th>Breakfast</th>
+                    <td>Oats Banana Pancakes with
+                        Protein Shake</td>
+                </tr>
+                <tr>
+                    <th>Lunch</th>
+                    <td>Multigrain roti with palak chicken Avocado bell pepper salad</td>
+                </tr>
+                <tr>
+                    <th>Pre-Workout Snack</th>
+                    <td>Bananas</td>
+                </tr>
+                <tr>
+                    <th>Dinner(Post-Workout Snack)</th>
+                    <td>Brown rice, peas paneer curry, sprouts vegetable salad</td>
+                </tr>
+            </table>
+            <br>
+
+
+            <h5>Day 2</h5>
+            <table>
+                <tr>
+                    <th>Breakfast</th>
+                    <td>Oatmeal with Greek Yogurt & Seasonal fruits
+                        Mango Juice</td>
+                </tr>
+                <tr>
+                    <th>Lunch</th>
+                    <td>Multigrain roti, fish curry, vegetable salad</td>
+                </tr>
+                <tr>
+                    <th>Pre-Workout Snack</th>
+                    <td>Toast with Jam</td>
+                </tr>
+                <tr>
+                    <th>Dinner(Post-Workout Snack)</th>
+                    <td>Broken wheat khichidi, carrot raita, egg white, and vegetable salad</td>
+                </tr>
+            </table>
+            <br>
+
+            <h5>Day 3</h5>
+            <table>
+                <tr>
+                    <th>Breakfast</th>
+                    <td>Poached Eggs
+                        Whole Grain Toast
+                        Protein Shake</td>
+                </tr>
+                <tr>
+                    <th>Lunch</th>
+                    <td>Quinoa upma, chicken and broccoli salad</td>
+                </tr>
+                <tr>
+                    <th>Pre-Workout Snack</th>
+                    <td>Mixed Nuts & Dried Fruits</td>
+                </tr>
+                <tr>
+                    <th>Dinner(Post-Workout Snack)</th>
+                    <td>Lean Beef and vegetable curry, brown rice, cucumber raita
+                        Baby Potatoes
+                        Chocolate Milk</td>
+                </tr>
+            </table>
+            <br>
+
+            <h5>Day 4</h5>
+            <table>
+                <tr>
+                    <th>Breakfast</th>
+                    <td>Oatmeal with Honey
+                        Apple Juice</td>
+                </tr>
+                <tr>
+                    <th>Lunch</th>
+                    <td>Grilled Chicken
+                        Salad
+                        Whole Grain Bread</td>
+                </tr>
+                <tr>
+                    <th>Pre-Workout Snack</th>
+                    <td>Toast with Peanut Butter</td>
+                </tr>
+                <tr>
+                    <th>Dinner(Post-Workout Snack)</th>
+                    <td>Methi Chicken
+                        Brown Rice
+                        Broccoli
+                        Protein Shake</td>
+                </tr>
+            </table>
+            <br>
+
+            <h5>Day 5</h5>
+            <table>
+                <tr>
+                    <th>Breakfast</th>
+                    <td>Scrambled Egg
+                        Whole Grain Toast
+                        Smoothie</td>
+                </tr>
+                <tr>
+                    <th>Lunch</th>
+                    <td>Grilled chicken vegetable roti rolls
+                        Green Salad</td>
+                </tr>
+                <tr>
+                    <th>Pre-Workout Snack</th>
+                    <td>Mixed Nuts & Dried Fruits</td>
+                </tr>
+                <tr>
+                    <th>Dinner(Post-Workout Snack)</th>
+                    <td>Chicken Stir Fry
+                        Spring Onion, Peppers & Broccoli
+                        Chocolate Milk</td>
+                </tr>
+            </table>
+            <br>
+
+            <h5>Day 6</h5>
+            <table>
+                <tr>
+                    <th>Breakfast</th>
+                    <td>Oatmeal
+                        Whole Grain Toast
+                        Orange Juice</td>
+                </tr>
+                <tr>
+                    <th>Lunch</th>
+                    <td>Whole Grain Chicken Wrap
+                        Black Beans, Peppers & Greek Yogurt</td>
+                </tr>
+                <tr>
+                    <th>Pre-Workout Snack</th>
+                    <td>Apple with peanut butter</td>
+                </tr>
+                <tr>
+                    <th>Dinner(Post-Workout Snack)</th>
+                    <td>Keema bhurji and multigrain roti, Lean Beef Mince
+                        Sweet Potato
+                        Protein Shake</td>
+                </tr>
+            </table>
+            <br>
+
+            <h5>Day 7</h5>
+            <table>
+                <tr>
+                    <th>Breakfast</th>
+                    <td>Oatmeal with Nuts
+                        Smoothie</td>
+                </tr>
+                <tr>
+                    <th>Lunch</th>
+                    <td>Whole wheat pasta with chicken and
+                        Green Salad</td>
+                </tr>
+                <tr>
+                    <th>Pre-Workout Snack</th>
+                    <td>Granola or Cereal</td>
+                </tr>
+                <tr>
+                    <th>Dinner(Post-Workout Snack)</th>
+                    <td>Fish curry, boiled green peas salad
+                        Brown Rice
+                        Garden Peas
+                        Milk</td>
+                </tr>
+            </table>
+            <br>
+            <div class="footer">
+            <button class="btn" style="background-color: gold;">
+                <a href="dashboard.html" style="color:black;text-decoration: none;font-weight: bold;">GO back to Dashboard</a>
+            </button>
+            <br>
+            <br>
+            <i class="fa fa-facebook" title="Facebook"></i>
+            <i class="fa fa-instagram" title="Instagram"></i>
+            <i class="fa fa-youtube" title="YouTube"></i>
+            <i class="fa fa-linkedin" title="LinkedIn"></i>
+            <p class="text-light"><b style="color:gold">Source: </b> healthifyme.com/diet</p>
+            </div>
+        </div>
+        
+        <script>
+            function flip(i) {
+                var element = document.getElementsByClassName("flip-card-inner")[i];
+                if(element.style.transform == "rotateY(180deg)") {
+                element.style.transform = "rotateY(0deg)";
+              }
+              else {
+                element.style.transform = "rotateY(180deg)";
+              }
+          }
+        </script>
+    </body>
+    
+</html>
