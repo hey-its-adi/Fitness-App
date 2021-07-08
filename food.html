@@ -107,12 +107,16 @@
             font-family: cursive;
         }
         .flip-card p{
-            font-size: large;
             font-family: Georgia, 'Times New Roman', Times, serif;
             padding:20px;
-            text-align: center;
+            
             height:100%;
             line-height: 40px;
+        }
+        .flip-back p{
+            padding:50px;
+            text-align: justify;
+            text-justify: inter-word;
         }
         .flip-card h3{
             margin-top:20px;
@@ -156,9 +160,11 @@
         <div class="intro">
             <h2>Welcome to the Food and Dietetics Section of our website.</h2>
         </div>
+        <br>
         <h2 style="color:gold;text-align: center;font-family: cursive;margin-top:20px;">
             Your path to a fit and happy life :)
         </h2>
+        <br>
         <h3><marquee scrollamount="20"><a href="#ideal" class="text-light" style="text-decoration: none;">Wanna see our Ideal 7-Day Diet Chart?</a></marquee></h3>
             
         <div class="flip-card col-sm-12 col-md-6 col-lg-4" onclick="flip(0)">
