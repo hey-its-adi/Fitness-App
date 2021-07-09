@@ -16,6 +16,7 @@ if(isset($_POST['submit']))
     $height = $_POST['height'];
     $weight = $_POST['weight'];
     $bmi = ($weight/$height/$height) * 10000;
+    $bmi = round($bmi,2);
 
 
     $query = "INSERT INTO user values('$name','$email','$password','$height','$weight','$bmi')";
