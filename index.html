@@ -13,24 +13,17 @@
         crossorigin="anonymous">
         <title>Checking</title>
         <style>
-          .container {
-  margin: 20px;
-  width: 500px;
-  height: 500px;
-  perspective: 1000px;
-
-}
+          
 body {
-  margin: 0;
+  margin:0;
   width: 100%;
   height: 100%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
   background-image:radial-gradient(#c5e9ee,#0c8bed);
 }
 .cardo {
+  width: 100%;
+  height: 100%;
+  perspective: 1000px;
   transition: transform 2s;
   transform-style: preserve-3d;
   cursor: pointer;
@@ -94,14 +87,38 @@ h2{
   font-family:cursive;
   font-style: italic;
 }
+.first{
+  width:600px;
+  height:500px;
+  background-color: white;
+  border-radius: 50px;
+  text-align: center;
+  float:left;
+  margin:100px;
+  padding:50px;
+}
+.second{
+  width:500px;
+  height:500px;
+  float:left;
+  margin:100px;
+}
         </style>
     </head>
     <body>
-        <div class="container">
-          
+          <div class="first">
+            <h1>Heading</h1>
+            <h2>Subheading</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+               labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                 voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                  non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+          </div>
+
+          <div class="second">
           <div class="cardo">
-              
-             
               <div class="front">
                 <h2>LOGIN</h2>
                 <form action="login.php" method="POST" class="form-inline">
