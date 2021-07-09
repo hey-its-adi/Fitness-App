@@ -1,4 +1,5 @@
 <?php
+ session_start();
 $conn = mysqli_connect("localhost", "root","","fitness");
 if(!$conn)
 {
@@ -23,14 +24,20 @@ if(isset($_POST['submit']))
     }
     $row = mysqli_fetch_assoc($run);
     $password = $row['password'];
+    $name = $row['name'];
+    $bmi = $row['bmi'];
+    
     if($pass != $password)
     {
-        echo "wrong password";
+        echo "Wrong Password";
 
     }
     else
     {
-        echo "redirecting to login page";
+        $_SESSION['name']= $name;
+        $_SESSION['bmi'] = $bmi;
+        echo '<meta http-equiv= "refresh" content="0; url=/Fitness-App/dashboard.php"/>';
+        
     }
 
 }
