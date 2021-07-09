@@ -11,7 +11,7 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" 
         integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" 
         crossorigin="anonymous">
-        <title>Checking</title>
+        <title>Login</title>
         <style>
           
 body {
@@ -38,7 +38,7 @@ body {
   align-items: center;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
-  box-shadow: 0 0 8px 0 rgba(0,0,0,0.2);
+  box-shadow:  white;
   border-radius: 50px 50px 0px 0px;
 
   
@@ -88,26 +88,32 @@ h2{
   font-style: italic;
 }
 .first{
-  margin-top: 80px;
-  margin-left: 40px;
+  width:700px;
   height:500px;
   background-color: white;
   border-radius: 50px;
   text-align: center;
   float:left;
   padding:50px;
+  margin: 100px 50px;
 }
 .second{
-  margin-top: 80px;
-  margin-left: 100px;
+  width:500px;
   height:500px;
   float:left;
+  margin:100px 50px;
   
 }
+          @media screen and (max-width:700px) {
+              .first , .second{
+                width:90%;
+                margin:50px 5%;
+              }
+          }
         </style>
     </head>
     <body>
-          <div class="first col-md-6 col-lg-6" >
+          <div class="first col-md-6 " >
             <h1>Heading</h1>
             <h2>Subheading</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
@@ -118,7 +124,7 @@ h2{
             </p>
           </div>
 
-          <div class="second col-md-6 col-lg-4 ">
+          <div class="second col-md-6 ">
           <div class="cardo">
               <div class="front">
                 <h2>LOGIN</h2>
@@ -167,11 +173,11 @@ h2{
                       </tr>
                       <tr>
                           <td><label for="weight" class="pb-3">Weight</label></td>
-                          <td><input type="text" id="weight" name="weight" class="form-control mb-3" size="30" placeholder="Weight"/></td>
+                          <td><input type="text" id="weight" name="weight" class="form-control mb-3" size="30" placeholder="Enter your Weight in kgs"/></td>
                       </tr>
                       <tr>
                           <td><label for="height" class="pb-3">Height</label></td>
-                          <td><input type="text" id="height" name="height" class="form-control mb-3" size="30" placeholder="Height"/></td>
+                          <td><input type="text" id="height" name="height" class="form-control mb-3" size="30" placeholder="Enter your Height in cms"/></td>
                       </tr>
                       <tr>
                           <td colspan="2"><button type="submit" id="submitbtn" class="btn btn-primary" name="submit">SIGN UP</button></td>
