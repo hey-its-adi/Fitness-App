@@ -152,6 +152,7 @@ background: linear-gradient(270deg, rgba(223,223,223,1) 0%, rgba(255,255,255,1) 
       </div>
     
     <h1 style="padding-top: 20px;">Welcome <i><?php echo $name; ?>!   </i>Your BMI is: <i><?php echo $bmi; ?></i></h1>
+    <button class="btn btn-primary" onclick="location.href='index.html'" style="margin-top: -90px; margin-left: 85%;">Signout</button>
     <?php
 
     if($bmi<18.5)
@@ -172,6 +173,7 @@ background: linear-gradient(270deg, rgba(223,223,223,1) 0%, rgba(255,255,255,1) 
     }
     
     ?>
+    
     <div class="flip-card col-sm-6 col-md-4 col-lg-3" onclick="flip(0)">
         <div class="flip-card-inner">
             <div class="flip-front">
