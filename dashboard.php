@@ -69,7 +69,7 @@ background: linear-gradient(270deg, rgba(223,223,223,1) 0%, rgba(255,255,255,1) 
           }
           .carousel-item img{
             width:100%;
-            height:400px;
+            height:100%;
           }
           .flip-back p{
               font-size: 15px;
@@ -98,8 +98,23 @@ background: linear-gradient(270deg, rgba(223,223,223,1) 0%, rgba(255,255,255,1) 
           @media screen and (max-width:600px) {
               .img-fluid{
                   width:100%;
-                  height:300px;
               }
+          }
+          .media{
+              width:90%;
+              margin:50px 5%;
+              background-color: white;
+              border-radius: 40px;
+              box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);
+          }
+          .media img{
+              width:25%;
+              height:100%;
+              margin:0px 30px;
+          }
+          .media p{
+              padding-right: 50px;
+              font-size: large;
           }
     </style>    
 </head>
@@ -130,7 +145,11 @@ background: linear-gradient(270deg, rgba(223,223,223,1) 0%, rgba(255,255,255,1) 
         </div>
       
           <div class="carousel-item">
-            <img src="Images/No alarm clock needed. my passion wakes me up..png" alt="pic3" class="img-fluid">
+            <a href="#yogas"><img src="Images/No alarm clock needed. my passion wakes me up..png" alt="pic3" class="img-fluid">
+            <div class="carousel-caption">
+                <h3 style="font-family:Arial, Helvetica, sans-serif;font-size:2em;font-weight:bold;">Click here to visit our <span style="color:gold;font-size:2em;font-family:fantasy;">Yoga</span> Section.</h3>
+            </div>
+            </a>
           </div>
           <div class="carousel-item">
             <img src="Images/just for you.png" alt="pic4" class="img-fluid">
@@ -152,7 +171,6 @@ background: linear-gradient(270deg, rgba(223,223,223,1) 0%, rgba(255,255,255,1) 
       </div>
     
     <u><h1 style="padding-top: 20px;">Welcome <i><?php echo $name; ?>!   </i>Your BMI is: <i><?php echo $bmi; ?></i></h1></u>
-    <button class="btn btn-primary" onclick="location.href='index.html'" style="margin-top: -142px; margin-left: 93%; font-size: 20px; width: 105px">Signout</button>
     <?php
 
     if($bmi<18.5)
@@ -341,6 +359,102 @@ background: linear-gradient(270deg, rgba(223,223,223,1) 0%, rgba(255,255,255,1) 
     </div>
     
 
+
+<div style="border-bottom:2px solid black;width:90%;padding:5px 20px;margin: 25px 5%;font-size:1.5em;
+font-family: Georgia, 'Times New Roman', Times, serif;text-align:center;">
+<h2 style="font-size:2em;" >Ten Simple Yoga Asanas</h2>
+<h3 style="width:50%;margin:auto;padding-bottom:25px;" id="yogas"><span style="font-size:1.5em;">“</span>A healthy mind lives in a healthy body.<span style="font-size:1.5em;">”</span></h3>
+<p>
+Yoga in the morning is amazing! After 7-8 hours (hopefully) of shut eye, our body responds affectionately to movement, 
+and our mind is clear and receptive to positive ideas and messages. Our breath is ready for us to deepen and expand its
+ potency, and our energy is just waiting to be stirred up after a long siesta.
+
+There are countless asanas and awesome yoga poses that all have amazing benefits, so it is really 
+challenging to pick a list of 10 asanas.
+</p>
+</div>
+
+<div class="media">
+  <img src="Images/Sun-Salutation-Sequence.jpg" alt="yoga" class="align-self-center">
+  <div class="media-body">
+    <h3>1. Surya Namaskar (Sun Salutations)</h3>
+    <p>There are several variations to this sequence of postures known as salute to the sun. They’re traditionally practiced as the sun is rising, and whichever version of Surya Namaskar you practice, they’re a great way to warm up and start to sync movement of the body with the flow of the breath.
+
+As they work all of the 7 major chakras, they’ll help you light up energetically and the rhythmic movement can help create a sense of inner calm.</p>
+  </div>
+</div>
+
+<div class="media">
+  <img src="Images/Utkatasana.jpg" alt="yoga" class="align-self-center">
+  <div class="media-body">
+      <h3>2. Utkatasana (Chair Pose)</h3>
+      <p>It’s most commonly called Chair Pose, which kinda suggests something comfortable and relaxing. Personally, I think it’s more appropriate to use one Utkatasana’s other translations, Thunderbolt, Fierce Pose or Awkward Pose.
+
+Call it what you will, Utkatasana is an amazing way to generate heat in the body and quickly build energy. It activates the core and the legs and challenges your mind to stay present and positive, all great benefits for a morning practice.</p>
+  </div>
+</div>
+<div class="media">
+  <img src="Images/Twisted-Chair.jpg" alt="yoga" class="align-self-center">
+  <div class="media-body">
+      <h3>3. Parivrtta Utkatasana (Revolved Chair Pose)</h3>
+      <p>I mean, if you’re going to go to all the trouble of sitting down in your not-so-comfy Chair, you might as well get the twisting benefits of the revolved variation right?! Twisting poses have a squeeze and release effect on your digestive system and internal organs so they help promote detoxification. And on that note, I’d hold off on breakfast until after your practice if you plan on getting twisty…</p>
+  </div>
+</div>
+<div class="media">
+  <img src="Images/Down-Dog.jpg" alt="yoga" class="align-self-center">
+  <div class="media-body">
+      <h3>4. Adho Mukha Svanasana (Downward Facing Dog)
+</h3>
+      <p>If you only have time for one in the morning, I’d make it this one. The whole body’s involved so it’s a great way to wake up every part of your physique. That beautiful stretch through the backs of the legs and hips just feels incredible. It’s little wonder our canine friends do this one naturally when they wake up…</p>
+  </div>
+</div>
+<div class="media">
+  <img src="Images/Anjaneyasana-Low-Lunge1.jpg" alt="yoga" class="align-self-center">
+  <div class="media-body">
+      <h3>5. Anjaneyasana (Low Lunge)</h3>
+      <p>I’ve got a problematic psoas muscle that likes to grip and shorten any chance it can get, so Anjaneyasana is like a bubble bath for my hip flexors. You get that lovely open stretchy feeling through the hips, arms and torso, and it also builds strength in the legs.
+
+A really nice morning variation is to interlace the fingers behind the lower back and gently drawing the hands away to open the chest and heart space.</p>
+  </div>
+</div>
+  <div class="media">
+  <img src="Images/Trikonasana.jpg" alt="yoga" class="align-self-center">
+  <div class="media-body">
+      <h3>6. Trikonasana (Triangle Pose)</h3>
+      <p>One of the classic yoga asanas, Trikonasana helps to give you a strong sense of grounding and stability through activating and balancing the root chakra, Muladhara. It powers up the legs and core, and the subtle twist allows you to open and light up the heart space. Beautiful.</p>
+  </div>
+  </div>
+  <div class="media">
+  <img src="Images/w31.jpg" alt="yoga" class="align-self-center">
+  <div class="media-body">
+      <h3>7. Virabhadrasana III (Warrior 3)</h3>
+      <p>I feel like I’m taking an energetic multivitamin when I spend 30 seconds in Warrior 3! It activates the legs, the core and fires up Manipura, the solar plexus chakra encouraging feelings of confidence, determination and willpower.</p>
+  </div>
+  </div>
+  <div class="media">
+  <img src="Images/Dancer.jpg" alt="yoga" class="align-self-center">
+  <div class="media-body">
+      <h3>8. Natarajasana (Dancer Pose)</h3>
+      <p>I’ve added it to the list for two reasons. Firstly, the backbend opens the heart space and creates a surge of beautiful energy and secondly, because it’s a balance it encourages equilibrium in both the body and the mind.</p>
+  </div>
+  </div>
+  <div class="media">
+  <img src="Images/Wide-Fold.jpg" alt="yoga" class="align-self-center">
+  <div class="media-body">
+      <h3>9. Prasarita Padottanasana (Wide Leg Forward Fold)
+</h3>
+      <p>I prefer this wide-legged forward fold to Uttanasana in the morning because it seems to feel better in my body, but of course both are great options. You’ve got glorious lengthening in the spine,a stretch through the hamstrings, and the effects of the inversion help you face the day with calmness and clarity. </p>
+  </div>
+  </div>
+  <div class="media">
+  <img src="Images/Half-Lord-of-the-Fishes.jpg" alt="yoga" class="align-self-center">
+  <div class="media-body">
+      <h3>10. Ardha Matsyendrasana (Half Lord of the Fishes Pose)</h3>
+      <p>Ardha Matsyendrasana is one of the classic yoga asanas for a good reason. Like all twisting postures, it promotes a healthy spine. It also helps stimulate the internal organs, promoting healthy digestion and encouraging detoxification. Another pose to do before breakfast.</p>
+  </div>
+  </div>
+</div>
+
         
   
      <script>
@@ -354,7 +468,7 @@ background: linear-gradient(270deg, rgba(223,223,223,1) 0%, rgba(255,255,255,1) 
             element.style.transform = "rotateY(180deg)";
           }
       }
-      function pip(n) {
+    function pip(n) {
   
         //PIP PART
       const video = document.querySelectorAll('video')[n];
@@ -371,18 +485,15 @@ background: linear-gradient(270deg, rgba(223,223,223,1) 0%, rgba(255,255,255,1) 
       } else {
           // Request Picture-in-Picture
       }
-  
-      
-      
-  video.addEventListener('enterpictureinpicture', () => {
-  button.innerHTML = 'Exit Coach Cam' + ' ' + '<i class="fa fa-sign-out"></i>';
-  });
-  
-  video.addEventListener('leavepictureinpicture', () => {
-  button.innerHTML = 'Coach Cam' + ' ' + '<i class="fa fa-video-camera"></i>';
-  });
-  flip(n);      
-}
+
+      video.addEventListener('enterpictureinpicture', () => {
+          button.innerHTML = 'Exit Coach Cam' + ' ' + '<i class="fa fa-sign-out"></i>';
+        });
+        video.addEventListener('leavepictureinpicture', () => {
+            button.innerHTML = 'Coach Cam' + ' ' + '<i class="fa fa-video-camera"></i>';
+        });
+        flip(n);      
+    }
   
     </script>
      </body>
