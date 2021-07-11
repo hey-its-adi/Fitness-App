@@ -30,7 +30,7 @@ if(isset($_POST['submit']))
     }
     else
     {
-        echo "<h1>Account Created Successfully</h1>";
+        echo "<h1 style='color:green'>Account Created Successfully</h1>";
     }
 }
 ?>
