@@ -19,6 +19,9 @@
         integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" 
         crossorigin="anonymous">
         <script src="https://kit.fontawesome.com/995dbfc1ce.js" crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
     <style>
         body{
             background: rgb(223,223,223);
@@ -148,7 +151,7 @@ background: linear-gradient(270deg, rgba(223,223,223,1) 0%, rgba(255,255,255,1) 
           <div class="carousel-item">
             <a href="#yogas"><img src="Images/No alarm clock needed. my passion wakes me up..png" alt="pic3" class="img-fluid">
             <div class="carousel-caption">
-                <h3 style="font-family:Arial, Helvetica, sans-serif;font-size:2em;font-weight:bold;">Click here to visit our <span style="color:gold;font-size:2em;font-family:fantasy;">Yoga</span> Section.</h3>
+                <h3 style="font-family: 'Dancing Script', cursive;font-size:2em;font-weight:bold;">Click here to visit our <span style="color:gold;font-size:2em;font-family:fantasy;">Yoga</span> Section.</h3>
             </div>
             </a>
           </div>
