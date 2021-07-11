@@ -29,7 +29,8 @@ if(isset($_POST['submit']))
     
     if($pass != $password)
     {
-        echo "<h1 style='color:red'>Wrong Password<h1>";
+        echo "<h1 style='color:red'>Wrong Password &#128566<h1>";
+        echo '<meta http-equiv= "refresh" content="3; url=/Fitness-App/index.html"/>';
 
     }
     else

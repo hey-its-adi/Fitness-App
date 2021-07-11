@@ -30,7 +30,8 @@ if(isset($_POST['submit']))
     }
     else
     {
-        echo "<h1 style='color:green'>Account Created Successfully</h1>";
+        echo "<h1 style='color:green'>Account Created Successfully &#129395</h1>";
+        echo '<meta http-equiv= "refresh" content="3; url=/Fitness-App/index.html"/>';
     }
 }
 ?>
