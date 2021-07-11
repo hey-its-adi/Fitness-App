@@ -174,24 +174,24 @@ background: linear-gradient(270deg, rgba(223,223,223,1) 0%, rgba(255,255,255,1) 
         </a>
       </div>
     
-    <u><h1 style="padding-top: 20px;">Welcome <i><?php echo $name; ?>!   </i>Your BMI is: <i><?php echo $bmi; ?></i></h1></u>
+    <h1 style="padding-top: 20px;">Welcome <i><?php echo $name; ?>!   </i>Your BMI is: <i><?php echo $bmi; ?></i></h1>
     <?php
 
     if($bmi<18.5)
     {
-        echo '<u><h2 style="padding-top: 20px;">Your state of health is:<i> Underweight</i></h2></u>';
+        echo '<h2 style="padding-top: 20px;">Your state of health is:<i> Underweight</i></h2>';
     }
     elseif ($bmi>= 18.5 && $bmi<=24.9)
     {
-        echo '<u><h2 style="padding-top: 20px;">Your state of health is:<i> Normal</i></h2></u>';
+        echo '<h2 style="padding-top: 20px;">Your state of health is:<i> Normal</i></h2>';
     }
     elseif($bmi>=25 && $bmi<=29.9)
     {
-        echo '<u><h2 style="padding-top: 20px;">Your state of health is:<i>Overweight</i></h2></u>';
+        echo '<h2 style="padding-top: 20px;">Your state of health is:<i>Overweight</i></h2>';
     }
     else
     {
-        echo '<u><h2 style="padding-top: 20px;">Your state of health is:<i> Obese</i></h2></u>';
+        echo '<h2 style="padding-top: 20px;">Your state of health is:<i> Obese</i></h2>';
     }
     
     ?>
