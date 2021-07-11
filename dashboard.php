@@ -151,7 +151,7 @@ background: linear-gradient(270deg, rgba(223,223,223,1) 0%, rgba(255,255,255,1) 
           <div class="carousel-item">
             <a href="#yogas"><img src="Images/No alarm clock needed. my passion wakes me up..png" alt="pic3" class="img-fluid">
             <div class="carousel-caption">
-                <h3 style="font-family: 'Dancing Script', cursive;font-size:2em;font-weight:bold;">Click here to visit our <span style="color:gold;font-size:2em;font-family:fantasy;">Yoga</span> Section.</h3>
+                <h3 style="font-family: 'Dancing Script';font-size:2em;font-weight:bold;">Click here to visit our <span style="color:gold;font-size:2em;font-family:fantasy;">Yoga</span> Section.</h3>
             </div>
             </a>
           </div>
