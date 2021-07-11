@@ -110,7 +110,8 @@ background: linear-gradient(270deg, rgba(223,223,223,1) 0%, rgba(255,255,255,1) 
           .media img{
               width:25%;
               height:100%;
-              margin:0px 30px;
+              border-radius : 40px 0px 0px 40px;
+              margin-right : 30px;
           }
           .media p{
               padding-right: 50px;
