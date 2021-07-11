@@ -29,7 +29,7 @@ if(isset($_POST['submit']))
     
     if($pass != $password)
     {
-        echo "Wrong Password";
+        echo "<h1>Wrong Password<h1>";
 
     }
     else
@@ -41,5 +41,9 @@ if(isset($_POST['submit']))
     }
 
 }
-
 ?>
+<html>
+    <head>
+            <link rel="stylesheet" href="php.css">
+    </head>
+</html>
